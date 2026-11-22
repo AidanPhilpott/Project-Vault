@@ -1,0 +1,11 @@
+# OS / editor noise
+.DS_Store
+*.tmp
+~$*
+
+# Raw originals: transcripts, PDFs, client exports. Kept locally, never committed.
+_raw/*
+!_raw/README.md
+
+# Machine-specific Claude settings
+.claude/settings.local.json
