@@ -50,7 +50,7 @@ Each one comes from a real post-mortem. Don't skip them, even if the user is eag
 ## Step 5: Write it up
 
 1. **`CLAUDE.md`:** fill every placeholder (project block, caution, "does NOT go in", precedence rule, update mode, tone) and the **Status block** (End, Reporting until = End, Cadence, usual Meetings rhythm, Last summary with one date per audience, all `none` to start, and Last meeting note = `none`). In the routing table, delete rows for modules that weren't chosen.
-2. **`README.md`:** fill the header and summary, and remove unchosen modules from the folder map.
+2. **`README.md`:** the root README is the kit guide. Replace it with `_kit/project-README.md` (if `_kit/` is already gone on a re-run, edit the existing README instead), fill the header and summary, and remove unchosen modules from the folder map and the skills table.
 3. **`context/`:** fill `project-overview.md`, `people.md` (including **Can agree scope/dates?** for each person and Since = start date), `plan.md` (including **reporting end date = project end date**) and `risks-and-assumptions.md` from the answers. Leave the rest as templates; they fill in through real work. Delete sections that clearly don't apply (e.g. invoicing on an internal project, the counterpart section on a solo project).
 4. **Prune unchosen modules:**
    - no research → delete `research/` and `.claude/skills/research-*`, and the research row in the `CLAUDE.md` routing table
