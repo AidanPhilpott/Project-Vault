@@ -4,7 +4,33 @@
 
 A markdown-first, git-friendly project knowledge base that keeps a project legible to both people and AI assistants while it runs. Every fact has one home, every meeting gets a file, open questions have owners and dates, and a set of Claude skills does the filing, reporting and drift-checking for you.
 
-It was extracted from an 18-week, 35-meeting project and revised based on what actually broke. v2 is an efficiency and reliability pass; see [`_kit/CHANGELOG.md`](_kit/CHANGELOG.md).
+## Why it exists
+
+Projects rarely fail for lack of information. They fail because the information is scattered and goes stale. Decisions live in someone's memory or a transcript nobody reopens. Open questions get asked once and then forgotten. The plan quietly stops describing reality while still looking authoritative. Status updates stop a few weeks before the work does, just when the handoff decisions are being made. And when someone new joins, or an AI assistant is asked to help, there's no reliable place to start.
+
+The vault fixes this by giving every project **one trustworthy, current record**: what we're doing, why, who decided what, what's still unknown, and how it ends.
+
+## How it works
+
+- **A fixed structure with one home per fact.** Scope, people, plan, risks, decisions, meetings and open questions each live in exactly one file. Everything else links to them, so there's nothing to keep in sync.
+- **A short bootstrap file (`CLAUDE.md`)** that Claude reads every session. It holds the rules, a routing table that says where everything goes, and a live **Status block** of key dates.
+- **Skills that do the upkeep.** Claude files new material, drafts status updates, and audits the folder for drift. It proposes every change before making it and flags every conflict, rather than silently overwriting.
+- **Checks that run without being asked.** Each session starts by comparing the Status block with today's date and saying so if a summary is overdue, meetings have stopped being logged, or the end date is close.
+- **Plain markdown in git.** It's readable by anyone, works with any editor, and changes go through branches and PRs, so a person always reviews what changed.
+
+## What it helps with
+
+- **Turning meetings and documents into a usable record.** Drop in a transcript, deck or PDF, and you get a meeting note, updated context, decision records and new open questions, with contradictions flagged.
+- **Status reporting.** Weekly or sprint summaries for internal and client audiences, drafted from what's actually in the record. Missed weeks are caught up and clearly labelled as reconstructions.
+- **Catching drift early.** Stale questions, missing summaries, unlogged meetings, overdue actions, and a plan that no longer matches reality.
+- **Onboarding.** A newcomer, or an AI assistant, can get up to speed from the domain primer, glossary, overview and meeting log instead of a week of catch-up calls.
+- **Scope and timeline changes.** Only people with authority can agree a change. Rumoured extensions are tracked as questions, and agreed ones run a checklist so nothing is left pointing at the old date.
+- **Research.** An optional five-stage pipeline from interview transcripts to insights, design briefs and client readouts.
+- **Ending well.** Close-out is planned from day one, so documentation goes up at the end of the project, not down.
+
+## Where it comes from
+
+The foundations were laid across several complex projects, with more than 300 meetings between them. Each rule exists because its absence caused a real problem: a missed handoff, a forgotten question, a plan that drifted, or a summary that never got written. This is v2, an efficiency and reliability pass; see [`_kit/CHANGELOG.md`](_kit/CHANGELOG.md).
 
 ---
 
@@ -155,7 +181,7 @@ Need a module that isn't here (e.g. a `distilled/` folder)? See `_templates/READ
 
 ---
 
-## Tips from the source project
+## Tips from the projects behind it
 
 - **Start the glossary on day one.** The faster it builds, the sooner newcomers and AI can contribute.
 - **The domain primer feels like overhead at kickoff and pays off in month three.**
