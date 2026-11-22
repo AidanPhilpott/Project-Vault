@@ -46,7 +46,7 @@
 - **Templates moved to `_templates/`.** On one project, `meetings/YYYY-MM-DD_meeting-name.md` and `decisions/YYYY-MM-DD_decision-name.md` were still sitting among the real files. Placeholder files in working folders pollute searches and meeting-log checks.
 - **New `_raw/` folder (git-ignored)** for original transcripts, PDFs and exports. It gives the "markdown-first, don't commit raw binaries" rule a concrete home, and intake knows to look there.
 - **`.gitignore` extended:** Office lock files (`~$*`), `_raw/`, and `.claude/settings.local.json`.
-- **`_kit/` folder for kit-only docs** (this changelog and SETUP.md). Setup deletes it, so it never clutters a live project.
+- **`_kit/` folder for kit-only docs** (this changelog and, originally, SETUP.md). Setup deletes it, so it never clutters a live project.
 - **Room for custom modules.** One project added a `distilled/` folder with its own template. `_templates/README.md` now documents how to add a module: template, folder, and a routing row.
 - **`CLOSEOUT-CHECKLIST.md` renamed to `CHECKLIST.md`.**
 
@@ -94,6 +94,12 @@ The full simulation was re-run on the updated kit. Setup, intake and the health 
 - **The Status block now records the meeting rhythm** (`Meetings:`). The session-start check couldn't judge a meeting gap without opening the log.
 - **`Last summary` holds one date per audience.** A single date hid the fact that the client summaries were further behind than the internal ones.
 - **Related TBDs can share one open-question row**, which keeps setup from producing a row per contact detail.
+
+## 8. Kit README and usage guide (2026-11-22)
+
+- **The root `README.md` is now the kit guide**, so the repo's landing page explains the vault: starting a project, the day-to-day loop, and every skill with example phrasings. It absorbs the old `_kit/SETUP.md`, which is removed.
+- **The project README template moved to `_kit/project-README.md`.** `pos-setup` copies it over the root README, then deletes `_kit/` as before.
+- **The project README gained a "Working in this folder" table** (what to say, which skill runs), so teammates keep the usage guidance after setup.
 
 ## Unchanged, deliberately
 
