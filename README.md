@@ -193,3 +193,15 @@ Need a module that isn't here (e.g. a `distilled/` folder)? See `_templates/READ
 ## Maintaining the kit
 
 Change the kit in this repo, on a branch, via PR. Note what changed and why in `_kit/CHANGELOG.md`. Opening this repo in Claude will trigger the setup interview (the marker is part of the kit); say "skip setup" for the session, and don't commit the renamed marker.
+
+---
+
+<details>
+<summary><sub>Wait, what does POS stand for?</sub></summary>
+<br>
+
+**POS stands for Project Operating System.** It doesn't have any other meaning. I don't know what you're talking about.
+
+Please stop asking.
+
+</details>
